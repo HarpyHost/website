@@ -1,3 +1,4 @@
+import Image from "next/image";
 const services = [
   {
     title: "Business Hosting",
@@ -31,18 +32,23 @@ const principles = [
 export default function Home() {
   return (
     <div className="min-h-screen bg-slate-950 text-white">
-      <header className="border-b border-white/10">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-8">
-          <a href="#" className="flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-500 font-bold text-white">
-              H
-            </div>
-
-            <span className="text-xl font-semibold tracking-tight">
-              HarpyHost
-            </span>
-          </a>
-
+<header className="border-b border-white/10">
+  <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-8">
+    <a 
+        href="#"
+        aria-label="HarpyHost home"
+        className="relative block h-14 w-[270px] overflow-hidden pt-[3px]"
+      >
+        <Image
+          src="/branding/harpyhost-logo.png"
+          alt="HarpyHost"
+          fill
+          priority
+          sizes="270px"
+          className="translate-y-[10px] scale-[4] object-contain"
+        />
+      </a>
+   
           <nav className="hidden items-center gap-8 text-sm text-slate-300 md:flex">
             <a className="transition hover:text-white" href="#services">
               Services
